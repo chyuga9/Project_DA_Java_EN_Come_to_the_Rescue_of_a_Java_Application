@@ -23,11 +23,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = filepath;
 	}
 
-	public void SortSymptomsList(Map<String, Integer> list) {
-		System.out.println();
-		System.out.println(list);
-	}
-
 	public Map<String, Integer> GetSymptoms() {
 		Map<String, Integer> result = new HashMap<String, Integer>();
 		if (filepath != null) {
