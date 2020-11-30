@@ -17,17 +17,13 @@ public class SymptomsWriter {
 
 		try {
 			File results = new File("results.out");
-			if (results.createNewFile()) {
-				FileWriter fileWriter = new FileWriter("results.out");
-				System.out.println("File created: " + results.getName());
-				for (Entry<String, Integer> entry : list.entrySet()) {
-					fileWriter.write(entry + "\n");
-				}
-				fileWriter.close();
-				System.out.println("Successfully wrote to the file.");
-			} else {
-				System.out.println("File alreadey exists.");
+			FileWriter fileWriter = new FileWriter("results.out");
+			System.out.println("File created: " + results.getName());
+			for (Entry<String, Integer> entry : list.entrySet()) {
+				fileWriter.write(entry + "\n");
 			}
+			fileWriter.close();
+			System.out.println("Successfully written to the file.");
 		} catch (IOException e) {
 			System.out.println("An error occured.");
 			e.printStackTrace();
