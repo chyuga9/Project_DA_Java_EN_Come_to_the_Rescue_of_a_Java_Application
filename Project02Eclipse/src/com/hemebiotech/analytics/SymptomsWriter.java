@@ -9,6 +9,10 @@ import java.util.TreeMap;
 
 public class SymptomsWriter {
 
+	/*
+	 * Creating file ("results.out") and writing on it each symptoms with its
+	 * occurrences
+	 */
 	public void SWriter(TreeMap<String, Integer> list) {
 
 		try {

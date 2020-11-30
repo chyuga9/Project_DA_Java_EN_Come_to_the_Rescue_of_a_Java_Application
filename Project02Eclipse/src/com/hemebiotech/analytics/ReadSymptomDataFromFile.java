@@ -23,6 +23,10 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = filepath;
 	}
 
+	/*
+	 * Reading from the file indicated. Each string and their occurrences written in
+	 * a Map (=array).
+	 */
 	public Map<String, Integer> GetSymptoms() {
 		Map<String, Integer> result = new HashMap<String, Integer>();
 		if (filepath != null) {
