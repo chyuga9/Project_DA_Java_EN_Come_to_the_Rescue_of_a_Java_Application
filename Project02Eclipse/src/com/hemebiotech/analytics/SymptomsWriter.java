@@ -14,11 +14,9 @@ public class SymptomsWriter {
 		try {
 			File results = new File("results.out");
 			if (results.createNewFile()) {
-				System.out.println("File created: " + results.getName());
 				FileWriter fileWriter = new FileWriter("results.out");
+				System.out.println("File created: " + results.getName());
 				for (Entry<String, Integer> entry : list.entrySet()) {
-					// String ju = l.getSname() + "=" + l.getSnboccurence();
-					System.out.println(entry);
 					fileWriter.write(entry + "\n");
 				}
 				fileWriter.close();

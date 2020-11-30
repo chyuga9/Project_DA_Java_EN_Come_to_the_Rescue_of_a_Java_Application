@@ -32,15 +32,12 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				while (line != null) {
 					if (!result.containsKey(line)) {
 						result.put(line, 1);
-						System.out.println(line);
 						line = reader.readLine();
 					} else {
 						result.put(line, result.get(line) + 1);
 						line = reader.readLine();
 					}
 				}
-				System.out.println();
-				System.out.println(result);
 				reader.close();
 			} catch (IOException e) {
 				e.printStackTrace();
