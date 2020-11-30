@@ -1,8 +1,6 @@
 package com.hemebiotech.analytics;
 
 import java.util.Map;
-//import java.util.List;
-//import java.util.Map;
 import java.util.TreeMap;
 
 public class SortSymptomslist {
@@ -12,7 +10,6 @@ public class SortSymptomslist {
 		list1.putAll(list);
 		System.out.println(list1);
 		System.out.println();
-		// for (Map.Entry<String, Integer> entry : list1.entrySet());
 		return list1;
 	}
 }
