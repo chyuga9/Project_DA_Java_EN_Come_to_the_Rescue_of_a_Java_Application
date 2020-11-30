@@ -24,7 +24,12 @@ public class AnalyticsCounter {
 		 */
 		ReadSymptomDataFromFile liseur = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
 		liseur.GetSymptoms();
-		liseur.SortSymptomsList(liseur.GetSymptoms());
+		// liseur.SortSymptomsList(liseur.GetSymptoms());
+		SortSymptomslist trieur = new SortSymptomslist();
+		trieur.Sort(liseur.GetSymptoms());
+		SymptomsWriter ecriveur = new SymptomsWriter();
+		ecriveur.SWriter(trieur.Sort(liseur.GetSymptoms()));
+
 		// next generate output
 		/*
 		 * FileWriter writer = new FileWriter("result.out");
