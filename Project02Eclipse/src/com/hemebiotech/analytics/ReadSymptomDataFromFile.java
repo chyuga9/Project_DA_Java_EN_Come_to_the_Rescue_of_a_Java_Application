@@ -24,28 +24,8 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	}
 
 	/*
-	 * public void SortSymptomsList(List<String> list) { Collections.sort(list);
-	 * System.out.println(); System.out.println(list); }
-	 */
-	public void SortSymptomsList(Map<String, Integer> list) {
-		// Collections.sort((List<T>) list);
-		System.out.println();
-		System.out.println(list);
-	}
-
-	/*
-	 * @Override public List<String> GetSymptoms() { ArrayList<String> result = new
-	 * ArrayList<String>(); if (filepath != null) { try { BufferedReader reader =
-	 * new BufferedReader(new FileReader(filepath)); String line =
-	 * reader.readLine();
-	 * 
-	 * while (line != null) { result.add(line); System.out.println(line); line =
-	 * reader.readLine(); } System.out.println(); System.out.println(result);
-	 * reader.close(); // Collections.sort(result); // System.out.println(); //
-	 * System.out.println(result); } catch (IOException e) { e.printStackTrace(); }
-	 * }
-	 * 
-	 * return result; }
+	 * Reading from the file indicated. Each string and their occurrences written in
+	 * a Map (=array).
 	 */
 	public Map<String, Integer> GetSymptoms() {
 		Map<String, Integer> result = new HashMap<String, Integer>();
@@ -56,19 +36,13 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				while (line != null) {
 					if (!result.containsKey(line)) {
 						result.put(line, 1);
-						System.out.println(line);
 						line = reader.readLine();
 					} else {
 						result.put(line, result.get(line) + 1);
 						line = reader.readLine();
 					}
 				}
-				System.out.println();
-				System.out.println(result);
 				reader.close();
-				// Collections.sort(result);
-				// System.out.println();
-				// System.out.println(result);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
