@@ -11,9 +11,9 @@ public class SymptomsWriter {
 
 	/*
 	 * Creating file ("results.out") and writing on it each symptoms with its
-	 * occurrences
+	 * occurrences (sort alphabetically)
 	 */
-	public void SWriter(TreeMap<String, Integer> list) {
+	public void sWriter(TreeMap<String, Integer> list) {
 
 		try {
 			File results = new File("results.out");

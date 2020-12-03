@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Anything that will read symptom data from a source The important part is, the
@@ -17,6 +18,7 @@ public interface ISymptomReader {
 	 * @return a raw listing of all Symptoms obtained from a data source, duplicates
 	 *         are possible/probable
 	 */
-	// List<String> GetSymptoms ();
-	Map<String, Integer> GetSymptoms();
+	Map<String, Integer> getSymptoms();
+
+	TreeMap<String, Integer> sort(Map<String, Integer> list);
 }
