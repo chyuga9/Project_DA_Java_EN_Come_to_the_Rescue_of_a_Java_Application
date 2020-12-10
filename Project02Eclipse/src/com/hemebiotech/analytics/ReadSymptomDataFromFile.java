@@ -34,10 +34,15 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			try {
 				BufferedReader reader = new BufferedReader(new FileReader(filepath));
 				String line = reader.readLine();
+				// Continue until there isn't line
 				while (line != null) {
+					// if Map "result" doesn't have a key that equals the line in its collection, it
+					// creates it
 					if (!result.containsKey(line)) {
 						result.put(line, 1);
 						line = reader.readLine();
+						// if Map "result" has a key that equals the line in its collection, it
+						// increases its value by one
 					} else {
 						result.put(line, result.get(line) + 1);
 						line = reader.readLine();

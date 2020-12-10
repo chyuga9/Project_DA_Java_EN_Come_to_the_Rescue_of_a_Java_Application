@@ -16,9 +16,12 @@ public class SymptomsWriter {
 	public void sWriter(TreeMap<String, Integer> list) {
 
 		try {
+			// Creating file "results.out"
 			File results = new File("results.out");
+			// Writing in file "results.out"
 			FileWriter fileWriter = new FileWriter("results.out");
 			System.out.println("File created: " + results.getName());
+			// Writing each element in the TreeMap, the key and the value
 			for (Entry<String, Integer> entry : list.entrySet()) {
 				fileWriter.write(entry + "\n");
 			}
